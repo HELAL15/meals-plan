@@ -1,6 +1,6 @@
 :root {
   --main: #00bdd6;
-  --primary: #8353e2;
+  --primary: #a586e4;
   --white: #fff;
 }
 
@@ -8,11 +8,17 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-transform: capitalize;
 }
 
-body {
-  margin: 4rem 2rem;
-  text-transform: capitalize;
+.details {
+  padding: 4rem 2rem;
+  background: url('./background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: auto;
+  height: 100vh;
 }
 
 .flex {
@@ -26,7 +32,12 @@ body {
   font-size: 2.5rem;
   color: var(--main);
   font-weight: bold;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.details__container {
+  width: 80%;
+  margin: auto;
 }
 
 .details__header {
@@ -35,11 +46,6 @@ body {
   font-size: 1.5rem;
 }
 
-.details__container {
-  width: 70%;
-  margin: auto;
-
-}
 
 .items {
   display: grid;
@@ -71,7 +77,7 @@ body {
 .item__header {
   width: 100%;
   padding: 1rem;
-  color: var(--primary);
+  color: var(--main);
   border-bottom: 2px solid var(--primary);
 
   .item__name {

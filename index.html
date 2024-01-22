@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>details</title>
+
+  <!-- if you dont want style file remove it , the style will be inline  -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- if you dont want inline style remove this style it will be in the style file -->
+  <style>
+    :root {
+      --main: #00bdd6;
+      --primary: #8353e2;
+      --white: #fff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 4rem 2rem;
+      text-transform: capitalize;
+    }
+
+    .flex {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .title {
+      text-align: center;
+      font-size: 2.5rem;
+      color: var(--main);
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    .details__container {
+      width: 80%;
+      margin: auto;
+    }
+
+    .details__header {
+      padding: 1rem;
+      color: var(--primary);
+      font-size: 1.5rem;
+    }
+
+
+    .items {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      justify-items: center;
+      border: 5px solid var(--primary);
+      border-radius: 25px;
+      overflow: auto;
+      background-color: #8353e21d;
+    }
+
+    .item {
+      width: 100%;
+      border-right: 2px solid var(--primary);
+    }
+
+    .item:nth-child(n+3) {
+      border-right: none;
+    }
+
+    .item:not(:nth-child(3n-3)) {
+      border-right: 2px solid var(--primary);
+    }
+
+    .item:nth-child(n+4) {
+      border-top: 2px solid var(--primary);
+    }
+
+    .item__header {
+      width: 100%;
+      padding: 1rem;
+      color: var(--primary);
+      border-bottom: 2px solid var(--primary);
+
+      .item__name {
+        font-size: 1.7rem;
+        text-align: center;
+      }
+    }
+
+    .item__body {
+      padding: 1rem 1.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+
+      li {
+        width: 80%;
+        color: var(--main);
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin: 1rem;
+
+      }
+    }
+
+    li:nth-child(even) {
+      color: var(--primary);
+    }
+
+    .justify-b {
+      justify-content: space-between;
+    }
+
+    .w-100 {
+      width: 100%;
+    }
+
+
+    @media(max-width:991px) {
+      .details__container {
+        width: 90%;
+        margin: auto;
+      }
+
+      .items {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .item:nth-child(n+2) {
+        border-right: none;
+      }
+
+      .item:not(:nth-child(2n-2)) {
+        border-right: 2px solid var(--primary);
+      }
+
+      .item:nth-child(n+3) {
+        border-top: 2px solid var(--primary);
+      }
+
+    }
+
+    @media(max-width:625px) {
+      .details__container {
+        width: 100%;
+        margin: auto;
+      }
+
+      .items {
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 1rem;
+      }
+
+      .item:nth-child(n+1) {
+        border-right: none;
+      }
+
+
+      .item:nth-child(n+2) {
+        border-top: 2px solid var(--primary);
+      }
+
+      .title {
+        font-size: 2rem;
+      }
+
+      .details__header {
+        padding: .7rem;
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <section class="details">
+    <h1 class="title">النظام الغذائي الخاص بك</h1>
+    <div class="details__container">
+      <div class="details__header flex">
+        <h2>meal plan</h2>
+        <h2>الوجبات</h2>
+      </div>
+      <div class="items">
+        <div class="item">
+          <div class="item__header">
+            <h3 class="item__name">breakfast</h3>
+          </div>
+          <ol class="item__body">
+            <li>
+              <div class="flex justify-b w-100">
+                <span>توست بني</span><span>60gm</span>
+              </div>
+            </li>
+            <li>
+              <div class="flex justify-b w-100">
+                <span>توست بني</span><span>60gm</span>
+              </div>
+            </li>
+            <li>
+              <div class="flex justify-b w-100">
+                <span>توست بني</span><span>60gm</span>
+              </div>
+            </li>
+          </ol>
+        </div>
+        <div class="item">
+          <div class="item__header">
+            <h3 class="item__name">snack</h3>
+          </div>
+          <ol class="item__body">
+            <li>
+              <div class="flex justify-b w-100">
+                <span>توست بني</span><span>60gm</span>
+              </div>
+            </li>
+            <li>
+              <div class="flex justify-b w-100">
+                <span>توست بني</span><span>60gm</span>
+              </div>
+            </li>
+          </ol>
+        </div>
+        <div class="item">
+          <div class="item__header">
+            <h3 class="item__name">lunch</h3>
+          </div>
+          <ol class="item__body">
+            <li>
+              <div class="flex justify-b w-100">
+                <span>توست بني</span><span>60gm</span>
+              </div>
+            </li>
+            <li>
+              <div class="flex justify-b w-100">
+                <span>توست بني</span><span>60gm</span>
+              </div>
+            </li>
+          </ol>
+        </div>
+        <div class="item">
+          <div class="item__header">
+            <h3 class="item__name">before workout</h3>
+          </div>
+          <ol class="item__body">
+            <li>
+              <div class="flex justify-b w-100">
+                <span>توست بني</span><span>60gm</span>
+              </div>
+            </li>
+            <li>
+              <div class="flex justify-b w-100">
+                <span>توست بني</span><span>60gm</span>
+              </div>
+            </li>
+          </ol>
+        </div>
+        <div class="item">
+          <div class="item__header">
+            <h3 class="item__name">after workout</h3>
+          </div>
+          <ol class="item__body">
+            <li>
+              <div class="flex justify-b w-100">
+                <span>توست بني</span><span>60gm</span>
+              </div>
+            </li>
+            <li>
+              <div class="flex justify-b w-100">
+                <span>توست بني</span><span>60gm</span>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>
